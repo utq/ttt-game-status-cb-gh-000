@@ -56,5 +56,9 @@ end
 
 def winner(board)
   itemList = won?(board)
-  return board[itemList[0]]
+  if itemList
+    return board[itemList[0]]
+  else 
+    return nil
+end
 end
