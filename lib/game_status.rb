@@ -23,6 +23,12 @@ def won?(board)
     if winCombo
       return combo
     end
+    winCombo = combo.all? do |index|
+      board[index] == "O"
+    end
+    if winCombo
+      return combo
+    end
   end
 
 end
