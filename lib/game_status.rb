@@ -14,3 +14,12 @@ WIN_COMBINATIONS = [
   [0,4,8], # Top row
   [2,4,6],  # Middle row
 ]
+
+def won?(board)
+  WIN_COMBINATIONS.each do |combo|
+    winCombo = combo.all do |index|
+      board[index] == "X"
+    end
+  end
+
+end
