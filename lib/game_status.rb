@@ -53,3 +53,7 @@ def over?(board)
     return false
   end
 end
+
+def winner(board)
+  itemList = won?(board)
+  return board[itemList[0]]
