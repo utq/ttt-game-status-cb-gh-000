@@ -20,7 +20,8 @@ def won?(board)
     winCombo = combo.all? do |index|
       board[index] == "X"
     end
-    return winCombo
+    if winCombo
+      return combo
   end
 
 end
