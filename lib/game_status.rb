@@ -22,6 +22,7 @@ def won?(board)
     end
     if winCombo
       return combo
+    end
   end
 
 end
