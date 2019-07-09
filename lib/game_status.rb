@@ -15,7 +15,7 @@ WIN_COMBINATIONS = [
   [2,4,6],  # Middle row
 ]
 
-def won(board)
+def won?(board)
   WIN_COMBINATIONS.each do |combo|
     winCombo = combo.all? do |index|
       board[index] == "X"
@@ -38,16 +38,16 @@ def full?(board)
 end
 
 def draw?(board)
-  if full?(board) && !won(board)
+  if full?(board) && !won?(board)
     return true
   end
-  if (!won(board) && !full?(board)) || won(board)
+  if (!won?(board) && !full?(board)) || won?(board)
     return false
   end
 end
 
 def over?(board)
-  if draw?(board) || won(board)
+  if draw?(board) || won?(board)
     return true
   else
     return false
