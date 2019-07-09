@@ -30,5 +30,24 @@ def won?(board)
       return combo
     end
   end
-
 end
+
+def full(board)
+  board.none? {|gameitem| gameitem == " "} #=> true
+end
+
+def draw(board)
+  if full(board) && !won(board)
+    return true
+  end
+  if (!won(board) && !full(board)) || won(board)
+    return false
+  end
+end
+
+def over(board)
+  if draw(board) || won(board)
+    return true
+  else
+    return false
+  end
