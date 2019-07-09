@@ -58,7 +58,7 @@ def winner(board)
   itemList = won?(board)
   if itemList
     return board[itemList[0]]
-  else 
+  else
     return nil
 end
 end
